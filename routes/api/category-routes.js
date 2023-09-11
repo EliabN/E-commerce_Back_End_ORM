@@ -75,7 +75,7 @@ router.delete('/:id', async (req, res) => {
   // delete a category by its `id` value
   Category.destroy({
     where: {
-      book_id: req.params.id,
+      id: req.params.id,
     },
   })
     .then((deletedCategory) => {
