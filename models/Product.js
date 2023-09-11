@@ -10,7 +10,6 @@ class Product extends Model { }
 Product.init(
   {
     // define columns
-    //TODO:define columns
     id: {
       type: DataTypes.INTEGER,
       allowNull: false,
@@ -31,7 +30,7 @@ Product.init(
     stock: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      set: 10,
+      defaultValue: 10,
       validate: {
         isNumeric: true,
       },
