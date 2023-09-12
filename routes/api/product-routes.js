@@ -37,7 +37,7 @@ router.get('/:id', async (req, res) => {
   }
 });
 
-// create new product
+// POST Create new product
 router.post('/', (req, res) => {
   /* req.body should look like this...
     {
@@ -116,6 +116,15 @@ router.put('/:id', (req, res) => {
 
 router.delete('/:id', (req, res) => {
   // delete one product by its `id` value
+  Product.destroy({
+    where: {
+      id: req.params.id,
+    },
+  })
+    .then((deletedProduct) => {
+      res.json(deletedProduct);
+    })
+    .catch((err) => res.json(err));
 });
 
 module.exports = router;
