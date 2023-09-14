@@ -6,8 +6,7 @@ const { Category, Product } = require('../../models');
 
 // GET all category
 router.get('/', async (req, res) => {
-  // TODO:find all categories
-  // be sure to include its associated Products
+  // To find all categories and associated Products
   try {
     const categoriesData = await Category.findAll({
       include: [{ model: Product }]
@@ -20,8 +19,7 @@ router.get('/', async (req, res) => {
 
 // GET category by id
 router.get('/:id', async (req, res) => {
-  // find one category by its `id` value
-  // be sure to include its associated Products
+  // Find one category by its `id` value and associated Products
   try {
     const categoryData = await Category.findByPk(req.params.id, {
       include: [{ model: Product }],
@@ -40,7 +38,7 @@ router.get('/:id', async (req, res) => {
 
 // POST create a new category
 router.post('/', async (req, res) => {
-  // create a new category
+  // Create a new category
   try {
     const categoryData = await Category.create(req.body);
     res.status(200).json(categoryData);
@@ -52,7 +50,7 @@ router.post('/', async (req, res) => {
 
 // PUT update a category
 router.put('/:id', async (req, res) => {
-  // update a category by its `id` value
+  // Update a category by its `id` value
   try {
     const categoryData = await Category.update(req.body, {
       where: {
@@ -72,7 +70,7 @@ router.put('/:id', async (req, res) => {
 
 // POST delete a new category
 router.delete('/:id', async (req, res) => {
-  // delete a category by its `id` value
+  // Delete a category by its `id` value
   Category.destroy({
     where: {
       id: req.params.id,

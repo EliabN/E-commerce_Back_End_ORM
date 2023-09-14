@@ -19,11 +19,11 @@ SO THAT my company can compete with other e-commerce companies
 
 The following animation shows the application's GET routes to return all categories, all products, and all tags being tested in Insomnia:
 
-![In Insomnia, the user tests “GET tags,” “GET Categories,” and “GET All Products.”.](./Assets/13-orm-homework-demo-01.gif)
+![In Insomnia, the user tests “GET tags,” “GET Categories,” and “GET All Products.”.](./Assets/orm-homework-demo-01.gif)
 
 The following animation shows the application's GET routes to return a single category, a single product, and a single tag being tested in Insomnia:
 
-![In Insomnia, the user tests “GET tag by id,” “GET Category by ID,” and “GET One Product.”](./Assets/13-orm-homework-demo-02.gif)
+![In Insomnia, the user tests “GET tag by id,” “GET Category by ID,” and “GET One Product.”](./Assets/orm-homework-demo-02.gif)
 
 The example test the application's POST below:
 
@@ -43,13 +43,15 @@ The example test the application's PUT below:
 
 The following animation shows the application's POST, PUT, and DELETE routes for categories being tested in Insomnia:
 
-![In Insomnia, the user tests “DELETE Category by ID,” “CREATE Category,” and “UPDATE Category.”](./Assets/13-orm-homework-demo-03.gif)
+![In Insomnia, the user tests “DELETE Category by ID,” “CREATE Category,” and “UPDATE Category.”](./Assets/orm-demo-03.gif)
 
 ## Demonstration
 
 Because this application won’t be deployed, here is a walkthrough video that demonstrates its functionality.
 
-Click the link for the [Demonstration video](https://watch.screencastify.com/v/6Osc8IEalBuwHxgAQXYP)
+Click the Demonstration video below for walkthrough:
+
+[![Demonstration video](./Assets/demo-video-image.png)](https://watch.screencastify.com/v/GKouO0XjcaMRekfkEbTY)
 
 ## Additional Information:
 
@@ -59,6 +61,17 @@ The `schema.sql` file in the `db` folder is used to create the database with MyS
 
 Using an `.env file` (environment variables) to store sensitive data like your MySQL username, password, and database name.
 
+### Seed the Database; 
+Run `npm run seed` to seed data to your database so that you can test your routes.
+
+### CRUD Operations in API Routes: 
+Routes in `product-routes.js`, `tag-routes.js`, and `category-routes.js` perform create, read, update, and delete operations using your Sequelize models.
+
+The application will be invoked by using the following command after seeding database:
+
+```bash
+use > npm start < for => node server.js
+```
 ### Database Models
 
 Refer to the following database for the four models;
@@ -169,17 +182,7 @@ Refer to the following database for the four models;
 
 * `Product` belongs to many `Tag` models, and `Tag` belongs to many `Product` models. Allow products to have multiple tags and tags to have many products by using the `ProductTag` through model.
 
-### Seed the Database; 
-Run `npm run seed` to seed data to your database so that you can test your routes.
 
-### CRUD Operations in API Routes: 
-Routes in `product-routes.js`, `tag-routes.js`, and `category-routes.js` perform create, read, update, and delete operations using your Sequelize models.
-
-The application will be invoked by using the following command after seeding database:
-
-```bash
-use > npm start < for => node server.js
-```
 
 ## License
 
