@@ -49,9 +49,7 @@ The following animation shows the application's POST, PUT, and DELETE routes for
 
 Because this application won’t be deployed, here is a walkthrough video that demonstrates its functionality.
 
-Click the Demonstration video below for walkthrough:
-
-[![Demonstration video](./Assets/demo-video-image.png)](https://watch.screencastify.com/v/GKouO0XjcaMRekfkEbTY)
+Click the link for the [Demonstration video](https://watch.screencastify.com/v/6Osc8IEalBuwHxgAQXYP)
 
 ## Additional Information:
 
