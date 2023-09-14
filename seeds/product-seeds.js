@@ -31,6 +31,24 @@ const productData = [
     stock: 22,
     category_id: 2,
   },
+  {
+    product_name: 'Jordan 4s',
+    price: 90.0,
+    stock: 25,
+    category_id: 5,
+  },
+  {
+    product_name: 'Nike Air Forces',
+    price: 90.0,
+    stock: 25,
+    category_id: 5,
+  },
+  {
+    product_name: 'Adidas Slides',
+    price: 90.0,
+    stock: 25,
+    category_id: 5,
+  },
 ];
 
 const seedProducts = () => Product.bulkCreate(productData);
